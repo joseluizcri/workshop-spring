@@ -1,4 +1,4 @@
-package com.joseluiz.pedidex;
+package com.joseluiz.pedidex.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
