@@ -25,4 +25,10 @@ public class ClienteResource {
     public Cliente insert(@RequestBody Cliente cliente) {
         return clienteService.inserir(cliente);
     }
+
+    @GetMapping(path = "{id}", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
+    public Cliente findOne(@PathVariable("id") Long id) {
+        return clienteService.findOne(id);
+    }
+
 }
