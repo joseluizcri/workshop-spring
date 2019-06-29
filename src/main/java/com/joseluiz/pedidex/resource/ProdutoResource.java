@@ -3,6 +3,7 @@ package com.joseluiz.pedidex.resource;
 import com.joseluiz.pedidex.model.Produto;
 import com.joseluiz.pedidex.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,6 +21,7 @@ public class ProdutoResource {
         return produtoService.findAll();
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             consumes = MediaType.APPLICATION_JSON_VALUE)
     public Produto insert(@RequestBody Produto produto) {
